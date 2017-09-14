@@ -26,10 +26,10 @@ var connection = mysql.createConnection
     begin();
  });
 
-function begin()
+/*function begin()
   {
     inquirer.prompt
     ({
-
+        message:
     })
-  }
+  }*/
