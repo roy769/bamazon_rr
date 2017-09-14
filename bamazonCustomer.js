@@ -14,22 +14,13 @@ var connection = mysql.createConnection
 });
 
 
-  connection.connect(function(err)
-   {
-    if (err) throw err;
-      begin();
-  });
-
  connection.connect(function(err)
  {
     if (err) throw err;
     begin();
  });
+ function begin()
+ {
+   console.log("hi");
 
-/*function begin()
-  {
-    inquirer.prompt
-    ({
-        message:
-    })
-  }*/
+ }
