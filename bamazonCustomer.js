@@ -1,17 +1,34 @@
+var mysql = require('mysql');
+var inquirer = require("inquirer");
+
+function purchase(item_id)
+{
+  console.log(item_id);
+//  return;
+}
+
 function begin()
 {
+  var done_string = "Test";
   inquirer.prompt(
   [
     {
-      type:"input",
       name: "item_id",
+      type:"input",
       message: "which id do you wanna purchase?"
+    },
+    {
+      name: "stock_quantity",
+      type:"input",
+      message: "how many?"
     }
-  ]);
+  ])
+  .then(
+  //if answer <= stock_quantity run purchase function
+  //then update database
+  );
+  //else try a different amount
 }
-
-var mysql = require('mysql');
-var inquirer = require("inquirer");
 
 var purchasedProducts = []; // array of purchased ids
 
@@ -30,4 +47,4 @@ connection.connect(function(err)
   begin();
 });
 //var query = "SELECT * FROM products WHERE item_id ?";
-//connection.query(query,{id: item_id})
+//diplay product table on CL
