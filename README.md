@@ -1,2 +1,3 @@
 # bamazon_rr
-fresh peaches
+Let sell sell sell
+with inquirer, node, npm and mysql
